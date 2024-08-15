@@ -34,7 +34,7 @@ app.use("/api/products/", ProductRoutes);
 const connectDB = () => {
   mongoose.set("strictQuery", true);
   mongoose
-    .connect(process.env.MODNO_DB)
+    .connect("mongodb+srv://khushi:SLH5QCxAQ2ZzZtCu@cluster0.0wb4f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => console.log("Connected to MONGO DB"))
     .catch((err) => {
       console.error("failed to connect with mongo");
